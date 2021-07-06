@@ -4,6 +4,7 @@ validationInputEl.addEventListener('change', onInputBlur);
 
 function onInputBlur(input) {
   if (input.currentTarget.value.length >= 1) {
+    validationInputEl.classList.remove('valid');
     validationInputEl.classList.add('invalid');
   } else {
     validationInputEl.classList.remove('invalid');
