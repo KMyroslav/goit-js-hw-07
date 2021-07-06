@@ -11,14 +11,13 @@ const countCategories = arr => {
   return count;
 };
 
-const displayCategories = arr => {
-  for (let i = 0; i < arr.length; i += 1) {
-    let headerEl = arr[i].firstElementChild.textContent,
-      listEl = arr[i].lastElementChild.children;
+const displayCategories = arr =>
+  [...arr].forEach(element => {
+    let headerEl = element.firstElementChild.textContent,
+      listEl = element.lastElementChild.children;
     console.log('Категория :', headerEl);
     console.log('Количество элементов :', listEl.length);
-  }
-};
+  });
 
 countCategories(categoriesListEl);
 displayCategories(categoriesListEl);
