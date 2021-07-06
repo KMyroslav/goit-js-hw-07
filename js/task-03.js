@@ -21,7 +21,7 @@ const makeGallery = (parent, itemArr) => {
   itemArr.forEach(({ url, alt }) =>
     nodeToAdd.insertAdjacentHTML(
       'beforeend',
-      `<li><img src=${url} alt=${alt} width = 480px></li>`,
+      `<li><img src="${url}" alt="${alt}" width = 480px></li>`,
     ),
   );
   parent.replaceWith(nodeToAdd);
